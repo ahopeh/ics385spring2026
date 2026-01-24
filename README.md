@@ -1,9 +1,11 @@
 # ICS 385 - Spring 2026
-This repository contains coursework for ICS 385, organized by week and assignment
+This is the main page for ICS 385 Spring 2026, with coursework organized by week and assignment
 
-## Repository Structure 
-- Each 'week#' folder contains work for that week
-- Homework for each week is located in a corresponding 'hw#' subfolder
+## Week 1 - Introduction, AI & Setup
 
-### Example
-week2/hw2/ - HTML & CSS homework
+### Week 2 - HTML & CSS
+- HW2: Bio Page
+    - [bio.html](week2/hw2/bio.html)
+    - [styles.css](week2/hw2/styles.css)
+
+### Week 3 - JavaScript
