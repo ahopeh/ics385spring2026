@@ -1,0 +1,181 @@
+html {
+    scroll-behavior: smooth; /* Enable smooth scrolling for anchor links and page navigation */
+}
+
+body {
+color: #40514e;
+margin: 0;
+text-align: center;
+font-family: "Spectral", serif;
+background: linear-gradient(to bottom, #e4f9f5, #d0ede8); /* gives the whole page a gradient background */
+}
+
+h1 {
+color: #0d7377;
+font-size: 5.625rem;
+margin: 50px auto 0 auto;
+font-family: "Cinzel", serif;
+}
+
+h2 {
+color: #0d7377;
+font-family: "Cinzel", serif;
+font-size: 2.5rem;
+font-weight: normal;
+padding-bottom: 10px;
+}
+
+h3 {
+color: #0d7377;
+font-family: "Cinzel", serif;
+}
+
+p {
+line-height: 2; /* double spacing between lines for better readability */
+}
+
+hr {
+border: dotted #59a5a5 6px;
+border-bottom: none;
+width: 4%;
+margin: 100px auto;
+display: block;
+}
+
+a {
+color: #f5f5f5;
+font-family: "IM Fell English", serif;
+margin: 10px 20px;
+text-decoration: none;
+}
+
+a:hover {
+color: #b4e3d5; /* lighter color on hovor for visual feedback */
+}
+
+.top-container {
+background: linear-gradient(to bottom, #e4f9f5, #c0e3dd);
+position: relative;
+padding-top: 100px;
+padding-bottom: 100px;
+}
+
+.middle-container {
+margin: 100px 0;
+}
+
+.bottom-container {
+background-color: #0d7377;
+padding: 50px 0 20px;
+}
+
+.intro {
+width: 85%;
+margin: auto;
+text-align: justify;
+}
+
+.experience, .skills, .education {
+    margin: 100px auto;
+    max-width: 700px;
+    text-align: left;
+}
+
+.job {
+    margin-bottom: 40px;
+}
+
+.job h3 {
+    color: #0a5c5f;
+    margin-bottom: 5px;
+}
+
+.job-details, .education-details {
+    color: #0d7377;
+    font-weight: 500;
+    margin: 5px 0 15px 0;
+    font-size: 1rem;
+}
+
+.skills-list {
+    line-height: 2;
+}
+
+.profile {
+    margin: 100px auto;
+    max-width: 700px;
+}
+
+.contact-message {
+width: 60%;
+margin: 40px auto 60px;
+}
+
+.copyright {
+color: #eaf6f6;
+font-size: 0.75rem;
+padding: 20px 0;
+}
+
+.title-text {
+position: relative;
+z-index: 1; 
+padding-top: 50px;
+}
+
+.btn {
+background: linear-gradient(to bottom, #718e89, #40514e);
+border-radius: 8px; /* this gives the button rounded corners */
+font-family: "Cinzel", sans-serif;
+color: #ffffff;
+font-size: 20px;
+padding: 10px 20px;
+text-decoration: none;
+display: inline-block;
+}
+
+.btn:hover {
+background: linear-gradient(to bottom, #6da49a, #2c3a38);
+text-decoration: none;
+}
+
+.btn:focus {
+    outline: 3px solid #0d7377; /* required focus outline for accessiblilty */
+    outline-offset: 2px;    
+}
+
+a:focus {
+    outline: 2px solid #0d7377;
+    outline-offset: 2px;
+}
+
+.footer-link i {
+    font-size: 2rem;
+}
+
+@media (max-width: 768px) { /* applies syles only on screens 768px wide or smaller (tablets/phones) */
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .intro, .contact-message {
+        width: 90%;
+    }
+
+    .experience, .skills, .education, .profile {
+        max-width: 90%;
+        padding: 0 20px;
+    }
+
+    .title-text {
+        padding-top: 30px;
+    }
+
+    .top-container, .middle-container {
+        padding-top: 50px;
+    }
+}
