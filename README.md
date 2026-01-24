@@ -5,7 +5,7 @@ This is the main page for ICS 385 Spring 2026, with coursework organized by week
 
 ### Week 2 - HTML & CSS
 - HW2: Bio Page
-    - [bio.html](week2/hw2/bio.html)
-    - [styles.css](week2/hw2/styles.css)
-
+    - Code: [bio.html](week2/hw2/bio.html), [styles.css](week2/hw2/styles.css)
+    - GitHub Page (Live Site): https://ahopeh.github.io/ics385spring2026/week2/hw2/
+    
 ### Week 3 - JavaScript
