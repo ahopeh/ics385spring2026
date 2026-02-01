@@ -9,3 +9,6 @@ This is the main page for ICS 385 Spring 2026, with coursework organized by week
     - GitHub Page (Live Site): https://ahopeh.github.io/ics385spring2026/week2/hw2/
 
 ### Week 3 - JavaScript
+- HW3: 
+    - Extension of Dicee Code: [dicee.html](week3/hw3/dicey/dicee.html), [styles.css](week3/hw3/dicey/styles.css), [index.js](week3/hw3/dicey/index.js)
+       - Three Dice Game (Live Page): https://ahopeh.github.io/ics385spring2026/week3/hw3/dicey/dicee.html
