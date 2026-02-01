@@ -1,0 +1,235 @@
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+/* Styling for welcome banner, Claude helped me with this */
+.welcome-banner {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 25px;
+  border-radius: 20px;
+  margin: 20px auto; 
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.welcome-banner h2 {
+  font-family: 'Lobster', cursive;
+  color: #FFFFFF;
+  margin: 0;
+  font-size: 2.5rem;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Claude comment: Added instructions styling for clarity */
+.instructions {
+  background-color: #4ECCA3;
+  padding: 20px;
+  border-radius: 15px;
+  margin: 20px auto;
+  max-width: 600px;
+}
+
+/* changed font to Lobster serif for better readibility */
+.instructions h2 {
+  font-family: 'Lobster', cursive;
+  color: #232931;
+  margin: 10px 0;
+  font-size: 2rem;
+}
+
+/* changed font to Quicksand serif for better readability */
+.instruction-text {
+  font-family: 'Quicksand', sans-serif;
+  color: #232931;
+  font-size: 1.3rem;
+  margin: 8px 0;
+  font-weight: 500;
+}
+
+body {
+  background-color: #393E46;
+  margin: 0;
+  padding: 20px 0;
+}
+
+h1 {
+  margin: 20px auto;
+  padding: 20px;
+  font-family: 'Lobster', cursive;
+  text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
+  font-size: 3.5rem;
+  color: #4ECCA3;
+  background-color: rgba(35, 41, 49, 0.6);
+  border-radius: 15px;
+  max-width: 800px;
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* AI-generated comment: Button styling for interactive gameplay */
+.roll-button {
+  background-color: #4ECCA3;
+  color: #232931;
+  font-family: 'Lobster', cursive;
+  font-size: 2rem;
+  padding: 15px 40px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  margin: 20px 0;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.roll-button:hover {
+  background-color: #45b393;
+  transform: scale(1.05);
+}
+
+.roll-button:active {
+  transform: scale(0.95);
+}
+
+/* AI-generated comment: Flexbox layout for responsive dice arrangement */
+.dice-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin: 30px 0;
+}
+
+.player-section {
+  margin: 20px;
+}
+
+.player-name {
+  font-size: 2.5rem;
+  color: #4ECCA3;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.dice-row {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.dice-img {
+  width: 100px;
+  height: 100px;
+  transition: transform 0.3s ease;
+}
+
+/* AI-generated comment: Animation for dice roll effect */
+.dice-img.rolling {
+  animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(-10deg);
+  }
+
+  75% {
+    transform: rotate(10deg);
+  }
+}
+
+.highest-number {
+  font-size: 1.8rem;
+  color: #FFD700;
+  font-family: 'Quicksand', sans-serif;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+/* AI-generated comment: Stats section styling */
+.stats {
+  background-color: #232931;
+  padding: 25px;
+  border-radius: 15px;
+  margin: 30px auto;
+  max-width: 600px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.stats-title {
+  font-family: 'Lobster', cursive;
+  color: #4ECCA3;
+  font-size: 2rem;
+  margin: 0 0 20px 0;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.stat-item {
+  background-color: #393E46;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.stat-label {
+  font-size: 1.2rem;
+  color: #4ECCA3;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+  margin: 5px 0;
+}
+
+.stat-value {
+  font-size: 2.5rem;
+  color: #FFD700;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  margin: 10px 0 5px 0;
+}
+
+footer {
+  margin-top: 5%;
+  color: #EEEEEE;
+  text-align: center;
+  font-family: 'Quicksand', sans-serif;
+}
+
+/* AI-generated comment: Responsive design for mobile devices */
+@media (max-width: 768px) {
+  .welcome-banner h2 {
+    font-size: 1.8rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .dice-img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .roll-button {
+    font-size: 1.5rem;
+    padding: 12px 30px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  } 
+}
