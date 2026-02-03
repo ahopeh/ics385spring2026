@@ -12,3 +12,5 @@ This is the main page for ICS 385 Spring 2026, with coursework organized by week
 - HW3: 
     - Extension of Dicee Code: [dicee.html](week3/hw3/dicey/dicee.html), [styles.css](week3/hw3/dicey/styles.css), [index.js](week3/hw3/dicey/index.js)
        - Three Dice Game (Live Page): https://ahopeh.github.io/ics385spring2026/week3/hw3/dicey/dicee.html
+    - Extension of Simon Code: [game.js](week3/hw3/Simon Game Challenge Completed/game.js), [index.html](week3/hw3/Simon%20Game%20Challenge%20Completed/index.html), [styles.css](week3/hw3/Simon%20Game%20Challenge%20Completed/styles.css)
+    - Simon Game (Live Page): https://ahopeh.github.io/ics385spring2026/week3/hw3/Simon%20Game%20Challenge%20Completed/index.html
