@@ -13,12 +13,11 @@ body {
 /* added styles for the instructions. Claude helped me a bit with the margins, height, and width */
 .instructions {
   font-family: 'Press Start 2P', cursive;
-  color: #FEF2BF;
+  color: #FEF2BF !important; /* claude helped me troubleshoot how to override the font color being inherited from the body */
   font-size: 1.5rem;
   margin:  20px auto;
   max-width: 600px;
   line-height: 1.8;
-  background-color: red; /* temporary test */
 }
 
 .container {
