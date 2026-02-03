@@ -10,6 +10,16 @@ body {
   color: #FEF2BF;
 }
 
+/* added styles for the instructions. Claude helped me a bit with the margins, height, and width */
+.instructions {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1rem;
+  margin:  20px auto;
+  max-width: 600px;
+  line-height: 1.8;
+  color: #FEF2BF;
+}
+
 .container {
   display: block;
   width: 50%;

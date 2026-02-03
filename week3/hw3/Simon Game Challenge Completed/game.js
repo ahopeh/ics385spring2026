@@ -7,6 +7,16 @@ var userClickedPattern = [];
 var started = false;
 var level = 0;
 
+// Added early level that uses only three colors to make it a little easier for people learning the game. The game will automatically add the green color block once a player reaches level 4. //
+
+function getAvailableColors() {
+  if (level < 4) {
+    return ["red", "blue", "yellow"];
+  } else {
+    return ["red", "blue", "green", "yellow"];
+  }
+}
+
 $(document).keypress(function() {
   if (!started) {
     $("#level-title").text("Level " + level);
@@ -52,12 +62,21 @@ function nextSequence() {
   userClickedPattern = [];
   level++;
   $("#level-title").text("Level " + level);
-  var randomNumber = Math.floor(Math.random() * 4);
-  var randomChosenColour = buttonColours[randomNumber];
+  // changed this code to support limiting the colors based on level - Claude helped me work out some of this logic //
+  var availableColors = getAvailableColors();
+  var randomNumber = Math.floor(Math.random() * availableColors.length);
+  var randomChosenColour = availableColors[randomNumber];
   gamePattern.push(randomChosenColour);
 
   $("#" + randomChosenColour).fadeIn(100).fadeOut(100).fadeIn(100);
   playSound(randomChosenColour);
+
+// this next part was added to hide/show the green button based on the level the player is on //
+  if (level < 4) {
+    $("#green").hide();
+  } else if (level === 4) {
+    $("#green").show();
+}
 }
 
 function animatePress(currentColor) {
