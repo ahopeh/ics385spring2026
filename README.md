@@ -14,3 +14,7 @@ This is the main page for ICS 385 Spring 2026, with coursework organized by week
        - Three Dice Game (Live Page): https://ahopeh.github.io/ics385spring2026/week3/hw3/dicey/dicee.html
     - Extension of Simon Code: [game.js](week3/hw3/Simon%20Game%20Challenge%20Completed/game.js), [index.html](week3/hw3/Simon%20Game%20Challenge%20Completed/index.html), [styles.css](week3/hw3/Simon%20Game%20Challenge%20Completed/styles.css)
     - Simon Game (Live Page): https://ahopeh.github.io/ics385spring2026/week3/hw3/Simon%20Game%20Challenge%20Completed/index.html
+
+### Week 4 - Node JS
+- HW4
+    -Assignment 3a: Extended hero code to cover 5 packages and create 5 .txt files [index.js](week4/hw4/hero/index.js)
