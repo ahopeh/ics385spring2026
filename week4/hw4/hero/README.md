@@ -1,1 +1,1 @@
-[index.js](week4/hero/index.js) expands on the original hero code given to us in class, going from only displaying a hero name, villian name, and inspirational quote to adding a popular movie quote and famous last words. These are all saved in 5 individual .txt files. 
+[index.js](week4/hw4/hero/index.js) expands on the original hero code given to us in class, going from only displaying a hero name, villian name, and inspirational quote to adding a popular movie quote and famous last words. These are all saved in 5 individual .txt files. 
