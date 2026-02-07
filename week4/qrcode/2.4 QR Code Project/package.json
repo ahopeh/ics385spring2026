@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "inquirer": "^9.2.12",
+    "qrcode": "^1.5.3",
+    "sharp": "^0.33.2",
+    "jimp": "^0.22.10"
+  },
+  "name": "2.4-qr-code-project",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "solution.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
