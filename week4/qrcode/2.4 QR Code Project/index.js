@@ -2,6 +2,7 @@
 April Hope Torres
 ICS 385 Spring 2026
 QR Code Project - Custom QR Code Generator
+February 6, 2026
 
 This Node.js application generates a custom QR code based on user input. It prompts the user for a URL, output filename, optional center image, color scheme, and decorative frame shape. The application uses the 'qrcode' library to create the QR code and 'jimp' for image manipulation to add frames and center images. The final QR code is saved as a PNG file, and the URL is saved to a text file for reference.
 
