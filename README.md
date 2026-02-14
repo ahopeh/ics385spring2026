@@ -20,3 +20,6 @@ This is the main page for ICS 385 Spring 2026, with coursework organized by week
     -Assignment 3a: Extended hero code to cover 5 packages and create 5 .txt files [index.js](week4/hw4/hero/index.js)
     -Assignment 4: Custom QR Code Generator
         -Code: [index.js](week4/qrcode/2.4%20QR%20Code%20Project/index.js), [package.json](week4/qrcode/2.4%20QR%20Code%20Project/package.json), [README.md](week4/qrcode/2.4%20QR%20Code%20Project/README.md)
+
+### Week 5 - 
+-HW 5b: Create a Fahrenheit to Centigrade converter (Express app) [f2cCalc.html](week5/f2c/f2cCalc.html), [index.js](week5/f2c/index.js)
