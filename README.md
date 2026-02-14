@@ -23,3 +23,4 @@ This is the main page for ICS 385 Spring 2026, with coursework organized by week
 
 ### Week 5 - 
 - HW 5b: Create a Fahrenheit to Centigrade converter (Express app) [f2cCalc.html](week5/f2c/f2cCalc.html), [index.js](week5/f2c/index.js), [README.md](week5/f2c/README.md)
+- HW 5c: Create a Cylinder Volume Calculator referencing 5b materials (Expess app) [VolCalculator.html](week5/VolCalc/VolCalculator.html), [index.js](week5/VolCalc/index.js), [README.md](week5/VolCalc/README.md)
