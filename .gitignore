@@ -2,3 +2,5 @@ week4/qrcode/2.4 QR Code Project/node_modules/
 week4/qrcode/2.4 QR Code Project/*.png
 week4/qrcode/2.4 QR Code Project/*.jpg
 .DS_Store
+node_modules
+*.zip
