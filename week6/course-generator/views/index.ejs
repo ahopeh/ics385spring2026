@@ -1,0 +1,26 @@
+<!--This is all HTML that's getting processed before the browser ever sees it-->
+
+<!-- copies the contents of header.ejs -->
+<%- include("partials/header.ejs") %>
+
+<!-- if courseID and courseName are sent from the server, then show a generated result. These avlues come from the express POST route -->
+    <% if (locals.courseID && locals.courseName) { %>
+        <h1>
+            <!-- print the value of courseID here (%= % means run JS AND print the resut into HTML)-->
+            <%= courseID %>
+            <!-- print the value of courseName here --> -->
+                <%= courseName %>
+        </h1>
+        <!-- if no course was generated then this shows the welcome message -->-->
+        <% } else { %>
+            <h1>📚 Welcome to the Random Course Generator 📚</h1>
+            <% } %>
+
+
+                <!-- when the button is clicked send a POST request to /submit -->
+                <form action="/submit" method="POST">
+                    <input type="submit" value="Generate Course">
+                </form>
+
+                <!-- insert the footer -->
+                <%- include("partials/footer.ejs") %>

@@ -1,0 +1,43 @@
+/* basic page styling, setting background color and font type and color */
+body {
+    background: #222;
+    font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui,
+        helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
+    color: rgb(202, 219, 231);
+}
+
+/* Use flexbox (via display: flex) to center content on the page */
+main {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+ /* increase the font size of the h1 element using rem sizing which is dynamic if the screen size shifts or if the user has specific accessibility settings */
+h1 {
+    font-size: 3.5rem;
+}
+
+/* adds styling to the button, removing the default styling and adding custom colors and changing the cursor to a pointer when hovering over the button */
+input {
+    appearance: none;
+    -webkit-appearance: none;
+    border: 0;
+    font-size: 0.9rem;
+    background: #888;
+    padding: 1rem;
+    color: white;
+    cursor: pointer;
+}
+
+/* makes sure the footer stays at the bottom */
+footer {
+    position: absolute;
+    bottom: 0;
+}

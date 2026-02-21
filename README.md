@@ -31,3 +31,5 @@ This is the main page for ICS 385 Spring 2026, with coursework organized by week
 - HW 6a: To Do List Update (Express App)
     - Code: [index.js](week6/todolist-v1/index.js), [package.json](week6/todolist-v1/package.json), [README.md](week6/todolist-v1/README.md)
     - Routes: /chores, /camping
+- HW 6b: Random Course Generator (Express + EJS)
+    - Code: [index.js](week6/course-generator/index.js), [README.md](week6/course-generator/README.md)
