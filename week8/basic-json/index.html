@@ -1,0 +1,39 @@
+<!-- 
+ ICS 385 Week 8a JSON Course Catalog
+ Author: April Hope
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UH Maui College Course Catalog</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <h1>UH Maui College Course Catalog</h1>
+
+    <div class="controls">
+
+        <input type="text" id="searchInput" placeholder="Search courses">
+
+        <select id="departmentFilter">
+            <option value="all">All Departments</option>
+            <option value="ICS">ICS</option>
+            <option value="MATH">Math</option>
+            <option value="ENG">English</option>
+        </select>
+
+    </div>
+
+    <div id="coursesContainer"></div>
+
+    <script src="course-catalog.js"></script>
+
+</body>
+
+</html>
