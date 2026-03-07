@@ -28,4 +28,4 @@ Contains the course catalog information including departments, courses, instruct
 
 ## Live Site
 View the live project displayed here: 
-[Assignment 8a JSON Course Catalog](https://ehopeh.github.io/ics385spring2026/week8/basic-json/)
+[Assignment 8a JSON Course Catalog](https://ahopeh.github.io/ics385spring2026/week8/basic-json/)
