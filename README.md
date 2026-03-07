@@ -37,4 +37,4 @@ This is the main page for ICS 385 Spring 2026, with coursework organized by week
 ### Week 8 -
 - HW 8a: University Course Catalog System using JSON
     - Code: [index.html](week8/basic-json/index.html)
-    - GitHub Page (Live Site): https://ahopeh.github.io/ics385spring2026/week8/basic-json/index.html
+    - GitHub Page (Live Site): https://ahopeh.github.io/ics385spring2026/week8/basic-json/
