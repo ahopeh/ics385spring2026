@@ -1,0 +1,137 @@
+{
+    "university": "University of Hawaii Maui College",
+    "semester": "Spring 2026",
+    "departments": [
+        {
+            "code": "ICS",
+            "name": "Information and Computer Sciences",
+            "courses": [
+                {
+                    "courseCode": "ICS 385",
+                    "title": "Web Development and Administration",
+                    "credits": 3,
+                    "enrolled": 22,
+                    "maxCapacity": 30,
+                    "instructor": {
+                        "name": "Dr. Bhattacharya"
+                    },
+                    "topics": [
+                        "HTML",
+                        "CSS",
+                        "JavaScript"
+                    ]
+                },
+                {
+                    "courseCode": "ICS 169",
+                    "title": "Intro Information Security",
+                    "credits": 3,
+                    "enrolled": 18,
+                    "maxCapacity": 25,
+                    "instructor": {
+                        "name": "Dr. Stevens"
+                    },
+                    "topics": [
+                        "Python",
+                        "Cybersecurity"
+                    ]
+                },
+                {
+                    "courseCode": "ICS 320",
+                    "title": "Intro to Information Systems And AI",
+                    "credits": 3,
+                    "enrolled": 27,
+                    "maxCapacity": 35,
+                    "instructor": {
+                        "name": "Prof. Domingo"
+                    },
+                    "topics": [
+                        "Programming",
+                        "Algorithms"
+                    ]
+                }
+            ]
+        },
+        {
+            "code": "MATH",
+            "name": "Mathematics",
+            "courses": [
+                {
+                    "courseCode": "MATH 115",
+                    "title": "Intro to Statistics and Probability",
+                    "credits": 4,
+                    "enrolled": 30,
+                    "maxCapacity": 35,
+                    "instructor": {
+                        "name": "Prof. Blamey"
+                    },
+                    "topics": [
+                        "Limits",
+                        "Derivatives"
+                    ]
+                },
+                {
+                    "courseCode": "MATH 241",
+                    "title": "Calculus II",
+                    "credits": 4,
+                    "enrolled": 15,
+                    "maxCapacity": 30,
+                    "instructor": {
+                        "name": "Dr. Patel"
+                    },
+                    "topics": [
+                        "Integration",
+                        "Series"
+                    ]
+                }
+            ]
+        },
+        {
+            "code": "ENG",
+            "name": "English",
+            "courses": [
+                {
+                    "courseCode": "ENG 100",
+                    "title": "Composition I",
+                    "credits": 3,
+                    "enrolled": 28,
+                    "maxCapacity": 30,
+                    "instructor": {
+                        "name": "Prof. Smith"
+                    },
+                    "topics": [
+                        "Writing",
+                        "Research"
+                    ]
+                },
+                {
+                    "courseCode": "ENG 200",
+                    "title": "Creative Writing",
+                    "credits": 3,
+                    "enrolled": 12,
+                    "maxCapacity": 20,
+                    "instructor": {
+                        "name": "Prof. Garcia"
+                    },
+                    "topics": [
+                        "Poetry",
+                        "Storytelling"
+                    ]
+                },
+                {
+                    "courseCode": "ENG 316",
+                    "title": "Advanced Research Writing",
+                    "credits": 3,
+                    "enrolled": 10,
+                    "maxCapacity": 25,
+                    "instructor": {
+                        "name": "Dr. White"
+                    },
+                    "topics": [
+                        "Research",
+                        "Ethics"
+                    ]
+                }
+            ]
+        }
+    ]
+}
