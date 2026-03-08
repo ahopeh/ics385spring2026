@@ -1,0 +1,13 @@
+# Environment variables - NEVER commit API keys! 
+.env 
+
+# IDE settings
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Node modules (if applicable) 
+node_modules/
