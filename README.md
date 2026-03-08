@@ -38,3 +38,6 @@ This is the main page for ICS 385 Spring 2026, with coursework organized by week
 - HW 8a: University Course Catalog System using JSON
     - Code: [index.html](week8/basic-json/index.html)
     - GitHub Page (Live Site): https://ahopeh.github.io/ics385spring2026/week8/basic-json/
+- HW 8b: Integrated Campus Dashboard using JSON and Multiple APIs
+    - Code: [index.html](week8/intermediate-dashboard/index.html), [syles.css](week8/intermediate-dashboard/styles.css), [config.js](week8/intermediate-dashboard/config.js), [api-client.js](week8/intermediate-dashboard/api-client.js), [course-catalog.js](week8/intermediate-dashboard/course-catalog.js), [dashboard.js](week8/intermediate-dashboard/dashboard.js)
+    - APIs: OpenWeatherMap, JokeAPI, RapidAPI (Chuck Norris)
