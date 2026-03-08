@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UH Maui College - Campus Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header class="dashboard-header">
+        <div class="header-content">
+            <div class="header-title">
+                <h1>UH Maui College Campus Dashboard</h1>
+                <p class="header-subtitle">ICS 385 — Spring 2026</p>
+            </div>
+            <div class="header-controls">
+                <button id="settingsBtn" class="header-btn">Settings</button>
+                <button id="refreshAllBtn" class="header-btn header-btn-primary">Refresh All</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== MAIN DASHBOARD ===== -->
+    <main id="dashboard-container" class="dashboard-grid">
+
+        <!-- Quick Stats Bar — numbers populated by dashboard.js -->
+        <section class="stats-overview">
+            <div class="stat-card">
+                <span class="stat-number" id="total-courses">-</span>
+                <span class="stat-label">Courses</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number" id="total-students">-</span>
+                <span class="stat-label">Students</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number" id="avg-capacity">-</span>
+                <span class="stat-label">Avg Capacity</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number" id="api-status">-</span>
+                <span class="stat-label">API Status</span>
+            </div>
+        </section>
+
+        <!-- Weather Widget — content filled by displayWeatherWidget() -->
+        <section id="weather-widget" class="dashboard-widget weather-widget">
+            <div class="loading">Loading weather data...</div>
+        </section>
+
+        <!-- Humor Widget — content filled by displayHumorWidget() -->
+        <section id="humor-widget" class="dashboard-widget humor-widget">
+            <div class="loading">Loading campus humor...</div>
+        </section>
+
+        <!-- Course Management Widget — uses CourseCatalogManager -->
+        <section class="dashboard-widget course-widget">
+            <div class="widget-header">
+                <h3>Course Management</h3>
+                <div class="widget-controls">
+                    <input type="text" id="searchInput" placeholder="Search courses...">
+                    <select id="departmentFilter">
+                        <option value="all">All Departments</option>
+                        <!-- Options populated dynamically by course-catalog.js -->
+                    </select>
+                </div>
+            </div>
+            <div id="coursesContainer" class="courses-grid">
+                <div class="loading">Loading courses...</div>
+            </div>
+        </section>
+
+        <!-- Quick Actions Widget -->
+        <section class="dashboard-widget actions-widget">
+            <div class="widget-header">
+                <h3>Quick Actions</h3>
+            </div>
+            <div class="actions-grid">
+                <button class="action-btn" onclick="dashboard.refreshWeather()">
+                    Update Weather
+                </button>
+                <button class="action-btn" onclick="dashboard.refreshHumor()">
+                    New Jokes
+                </button>
+                <button class="action-btn" onclick="dashboard.exportData()">
+                    Export Data
+                </button>
+                <button class="action-btn" onclick="dashboard.refreshAll()">
+                    Reload All
+                </button>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===== API KEY SETUP MODAL ===== -->
+    <!-- Shown on first visit or when clicking Settings -->
+    <div id="apiKeyModal" class="modal">
+        <div class="modal-content">
+            <h2>API Configuration</h2>
+            <p>Enter your API keys to enable all dashboard features.
+                Keys are stored locally in your browser and never sent to any server.</p>
+
+            <div class="api-key-setup">
+                <div class="form-group">
+                    <label for="openWeatherKey">OpenWeatherMap API Key:</label>
+                    <input type="password" id="openWeatherKey" placeholder="Enter your OpenWeather API key">
+                    <small>Get a free key at
+                        <a href="https://openweathermap.org/api" target="_blank">
+                            openweathermap.org
+                        </a>
+                    </small>
+                </div>
+
+                <div class="form-group">
+                    <label for="rapidApiKey">RapidAPI Key:</label>
+                    <input type="password" id="rapidApiKey" placeholder="Enter your RapidAPI key">
+                    <small>Get a free key at
+                        <a href="https://rapidapi.com" target="_blank">
+                            rapidapi.com
+                        </a>
+                    </small>
+                </div>
+
+                <div class="modal-actions">
+                    <button id="saveKeysBtn" class="save-btn">Save Keys</button>
+                    <button id="skipKeysBtn" class="skip-btn">Skip for Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <p>ICS 385 Week 8 
