@@ -17,7 +17,7 @@ class CampusDashboard {
         this.config = appConfig;
 
         // The API client handles all external requests
-        this.apiClient = new UnifiedApiClient(this.config);
+        this.apiClient = new UnifiedApiClient(this.config.config);
 
         // Course catalog manager from our previous assignment
         this.courseCatalog = new CourseCatalogManager();
@@ -194,6 +194,70 @@ class CampusDashboard {
         } catch (error) {
             console.error('Humor loading failed:', error);
             this.displayHumorWidget({ chuck: null, programming: null });
+        }
+    }
+
+    // ===== WIDGET DISPLAY =====
+
+    displayWeatherWidget(data) {
+        const container = document.getElementById('weather-widget');
+        if (!container) return;
+
+        const isError = data.error;
+        const temp = typeof data.main.temp === 'number' ? Math.round(data.main.temp) + '°F' : '--';
+
+        container.innerHTML =
+            '<div class="widget-header">' +
+                '<h3>Campus Weather</h3>' +
+            '<span class="last-updated">' + this.getTimeAgo('weather') + '</span>' +
+            '</div>' +
+            '<div class="weather-content ' + (isError ? 'error-state' : '') + '">' +
+            '<div class="weather-main">' +
+            '<div class="temperature">' + temp + '</div>' +
+            '<div class="location">' + (data.name || 'Kahului') + '</div>' +
+            '<div class="description">' + data.weather[0].description + '</div>' +
+            '</div>' +
+            '<div class="weather-details">' +
+            '<span>Humidity: ' + data.main.humidity + '%</span>' +
+            '<span>Wind: ' + data.wind.speed + ' mph</span>' +
+            '</div>' +
+            (isError ? '<div class="error-badge">' + data.message + '</div>' : '') +
+            '</div>';
+    }
+
+    displayHumorWidget(jokes) {
+        const container = document.getElementById('humor-widget');
+        if (!container) return;
+
+        const chuckJoke = jokes.chuck
+            ? (jokes.chuck.value || 'Chuck Norris joke unavailable')
+            : 'Chuck Norris joke unavailable';
+
+        const progJoke = jokes.programming
+            ? (jokes.programming.joke ||
+                (jokes.programming.setup + ' ... ' + jokes.programming.delivery) ||
+                'Programming joke unavailable')
+            : 'Programming joke unavailable';
+
+        container.innerHTML =
+            '<div class="widget-header">' +
+            '<h3>Campus Humor</h3>' +
+            '<button class="refresh-btn" id="refreshHumorBtn">New Jokes</button>' +
+            '</div>' +
+            '<div class="humor-content">' +
+            '<div class="joke-section">' +
+            '<h4>Chuck Norris Fact</h4>' +
+            '<p class="joke-text">' + chuckJoke + '</p>' +
+            '</div>' +
+            '<div class="joke-section">' +
+            '<h4>Programming Humor</h4>' +
+            '<p class="joke-text">' + progJoke + '</p>' +
+            '</div>' +
+            '</div>';
+
+        const btn = document.getElementById('refreshHumorBtn');
+        if (btn) {
+            btn.addEventListener('click', () => this.refreshHumor());
         }
     }
 
