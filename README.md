@@ -41,3 +41,14 @@ This is the main page for ICS 385 Spring 2026, with coursework organized by week
 - HW 8b: Integrated Campus Dashboard using JSON and Multiple APIs
     - Code: [index.html](week8/intermediate-dashboard/index.html), [syles.css](week8/intermediate-dashboard/styles.css), [config.js](week8/intermediate-dashboard/config.js), [api-client.js](week8/intermediate-dashboard/api-client.js), [course-catalog.js](week8/intermediate-dashboard/course-catalog.js), [dashboard.js](week8/intermediate-dashboard/dashboard.js)
     - APIs: OpenWeatherMap, JokeAPI, RapidAPI (Chuck Norris)
+
+### Week 9 - 
+- HW 9c: Weather API
+    - Displays: 
+        - Description
+        - Temperature 
+        - Icon
+        - Humidity 
+        - Wind Speed
+        - Cloudiness
+    - [weather.html](week9/weather.html) 
