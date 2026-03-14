@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Current Weather in Paia</title>
+</head>
+
+<body>
+
+    <h1>Current Weather in Paia</h1>
+
+    <p id="description"></p>
+    <p id="temp"></p>
+    <p id="humidity"></p>
+    <p id="wind"></p>
+    <p id="clouds"></p>
+
+    <img id="icon">
+
+    <script>
+
+const apiKey = "5e9c8b72f95257bf02441bed9a20859b";
+const lat = "20.9033";
+const long = "-156.3694";
+
+const url = "https://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + long + "&appid=" + apiKey + "&units=imperial";
+
+        fetch(url)
+            .then(response => response.json())
+            .then(data => {
+
+                document.getElementById("description").innerHTML = "Description: " + data.weather[0].description;
+
+                document.getElementById("temp").innerHTML = "Temp: " + data.main.temp;
+
+                document.getElementById("humidity").innerHTML = "Humidity: " + data.main.humidity;
+
+                document.getElementById("wind").innerHTML = "Wind: " + data.wind.speed;
+
+                document.getElementById("clouds").innerHTML = "Clouds: " + data.clouds.all;
+
+                document.getElementById("icon").src = "https://openweathermap.org/img/wn/" + data.weather[0].icon + ".png";
+
+            });
+
+    </script>
+
+</body>
+
+</html>
