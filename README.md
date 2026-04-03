@@ -58,3 +58,6 @@ This is the main page for ICS 385 Spring 2026, with coursework organized by week
 - Property: Hale Ōhiʻa Lehua - A Big Island Eco-Lodge
 - Code: [models/Property.js](week10/term-project/models/Property.js), [seed.js](week10/term-project/seed.js)
 - For more information on this weekʻs work on the project: [README.md](week10/term-project/README.md)
+
+### Week 11 
+- PyMongo and MongoDB Assignment: [pymongo_crud.py](week11/pymongo_crud.py)
