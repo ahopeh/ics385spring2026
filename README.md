@@ -61,3 +61,5 @@ This is the main page for ICS 385 Spring 2026, with coursework organized by week
 
 ### Week 11 
 - PyMongo and MongoDB Assignment: [pymongo_crud.py](week11/pymongo_crud.py)
+- Mongoose Schema and MongoDB: [index.js](week11/mongoose-crud/index.js)
+- Term Project - Term 3 Project Deliverable: [term-project](week11/term-project/)  
