@@ -1,0 +1,82 @@
+{
+  "info": {
+    "_postman_id": "a668b515-fd0a-4854-b8c3-f64bab6572d5",
+    "name": "Hale Ohia Lehua API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "53777193",
+    "_collection_link": "https://go.postman.co/collection/53777193-a668b515-fd0a-4854-b8c3-f64bab6572d5?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "GET property by ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/properties",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "properties"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get all properties",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/properties",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "properties"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POST add review",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"guestName\": \"Keoki Akana\",\n  \"rating\": 5,\n  \"comment\": \"Incredible paniolo experience, horseback riding was unforgettable!\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/properties/69d33fa7fb2e0f2c92b23756/reviews",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "properties",
+            "69d33fa7fb2e0f2c92b23756",
+            "reviews"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
