@@ -66,3 +66,4 @@ This is the main page for ICS 385 Spring 2026, with coursework organized by week
 
 ### Week 12
 - 12a - React Basics: [README.md](week12/hw12a/README.md)
+- 12b - [PRD.pdf](week12/hw12b/PRD.pdf)
