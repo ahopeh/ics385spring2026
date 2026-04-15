@@ -67,3 +67,7 @@ This is the main page for ICS 385 Spring 2026, with coursework organized by week
 ### Week 12
 - 12a - React Basics: [README.md](week12/hw12a/README.md)
 - 12b - [PRD.pdf](week12/hw12b/PRD.pdf)
+- 12c - Week 12 Term Project Deliverable: Starter React UI
+    - React marketing page 
+    - To run: 'cd week12/term-project && npm install & npm run dev'
+    - [Screenshot](week12/term-project/docs/screenshot.png) 
