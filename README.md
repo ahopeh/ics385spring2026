@@ -73,4 +73,6 @@ This is the main page for ICS 385 Spring 2026, with coursework organized by week
     - [Screenshot](week12/term-project/docs/screenshot.png) 
 
 ### Week 13
-- 13a - React Props & Map [Readme](week13/hw13a-island-cards/README.md)
+- 13a - React Props & Map 
+    - [Readme](week13/hw13a-island-cards/README.md)
+    -[Screenshot](week13/hw13a-island-cards/docs/Screenshot%202026-04-16%20at%208.48.32 PM.png)
