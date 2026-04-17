@@ -1,0 +1,146 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #1a1008;
+  color: #f0e6d3;
+  font-family: 'Georgia', serif;
+}
+
+.app {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.site-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #5a3e2b;
+  padding-bottom: 1.5rem;
+}
+
+.site-header h1 {
+  font-size: 2rem;
+  color: #e8a245;
+  letter-spacing: 0.05em;
+}
+
+.subtitle {
+  color: #a08060;
+  margin-top: 0.4rem;
+  font-style: italic;
+}
+
+/* Controls */
+.controls {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.controls label {
+  color: #c8a882;
+  font-size: 0.95rem;
+}
+
+.controls select {
+  background: #2e1f0e;
+  color: #f0e6d3;
+  border: 1px solid #5a3e2b;
+  padding: 0.4rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.controls select:focus {
+  outline: 2px solid #e8a245;
+}
+
+/* Summary card */
+.summary-card {
+  background: #2e1f0e;
+  border: 1px solid #5a3e2b;
+  border-left: 4px solid #e8a245;
+  padding: 0.75rem 1.25rem;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+  display: flex;
+  gap: 2rem;
+  color: #c8a882;
+  font-size: 0.95rem;
+}
+
+.summary-card strong {
+  color: #e8a245;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Island card */
+.island-card {
+  background: #2e1f0e;
+  border: 1px solid #5a3e2b;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.island-card:hover {
+  transform: translateY(-3px);
+  border-color: #e8a245;
+}
+
+.island-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+}
+
+.card-body {
+  padding: 1rem;
+}
+
+.card-body h2 {
+  font-size: 1.2rem;
+  color: #e8a245;
+  margin-bottom: 0.25rem;
+}
+
+.nickname {
+  color: #a08060;
+  font-style: italic;
+  font-size: 0.9rem;
+  margin-bottom: 0.6rem;
+}
+
+.segment-badge {
+  display: inline-block;
+  background: #5a3e2b;
+  color: #f0e6d3;
+  font-size: 0.75rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  margin-bottom: 0.6rem;
+  letter-spacing: 0.03em;
+}
+
+.avg-stay {
+  font-size: 0.9rem;
+  color: #c8a882;
+}
+
+.avg-stay strong {
+  color: #f0e6d3;
+}
