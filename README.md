@@ -71,3 +71,6 @@ This is the main page for ICS 385 Spring 2026, with coursework organized by week
     - React marketing page 
     - To run: 'cd week12/term-project && npm install & npm run dev'
     - [Screenshot](week12/term-project/docs/screenshot.png) 
+
+### Week 13
+- 13a - React Props & Map [Readme](week13/hw13a-island-cards/README.md)
