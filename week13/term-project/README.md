@@ -10,6 +10,11 @@ full Visitor Statistics Dashboard. The dashboard is currently public-facing. I'm
 
 ---
 
+### Deliverables
+- [screenshots](/week13/term-project/docs/)
+- [reflection-paragraph](/week13/term-project/docs/reflection-paragraph.txt)
+
+
 ### Pages
 - **Marketing Page** — Hero with live Kīlauea video, About, Amenities, 
   Conditions Snapshot, dual CTAs for Leisure and Research guests
