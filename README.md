@@ -81,5 +81,4 @@ This is the main page for ICS 385 Spring 2026, with coursework organized by week
 - 13c - Term Project 
     - [Readme](/week13/term-project/README.md)
     - [screenshots](/week13/term-project/docs/)
-    - [reflection-paragraph](/week13/term-project/docs/reflection-paragraph.txt)
-    
+    - [reflection-paragraph](/week13/term-project/docs/reflection-paragraph.md)

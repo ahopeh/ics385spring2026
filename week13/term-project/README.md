@@ -12,7 +12,7 @@ full Visitor Statistics Dashboard. The dashboard is currently public-facing. I'm
 
 ### Deliverables
 - [screenshots](/week13/term-project/docs/)
-- [reflection-paragraph](/week13/term-project/docs/reflection-paragraph.txt)
+- [reflection-paragraph](/week13/term-project/docs/reflection-paragraph.md)
 
 
 ### Pages
