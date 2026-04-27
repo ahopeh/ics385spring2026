@@ -82,3 +82,8 @@ This is the main page for ICS 385 Spring 2026, with coursework organized by week
     - [Readme](/week13/term-project/README.md)
     - [screenshots](/week13/term-project/docs/)
     - [reflection-paragraph](/week13/term-project/docs/reflection-paragraph.md)
+
+### Week 14
+- 14b - Passport.js authentication 
+    - [Screenshots](week14/hw14b/deliverables/screenshots/)
+    - [bcryptExplanation](week14/hw14b/deliverables/bcryptExplanation.md)
