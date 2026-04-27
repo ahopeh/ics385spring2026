@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Login — Hale ʻŌhiʻa Lehua</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #0f0f0f;
+            background-image: radial-gradient(ellipse at top, #1a0a00 0%, #0f0f0f 70%);
+            font-family: 'Georgia', serif;
+            color: #e8e0d4;
+        }
+
+        .login-card {
+            background: #1a1a1a;
+            border: 1px solid #3d2b1f;
+            border-radius: 12px;
+            padding: 2.5rem 2rem;
+            width: 100%;
+            max-width: 420px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+        }
+
+        .property-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .property-header .lehua {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .property-header h1 {
+            font-size: 1.3rem;
+            color: #c8a882;
+            letter-spacing: 0.05em;
+        }
+
+        .property-header p {
+            font-size: 0.85rem;
+            color: #6b5a4e;
+            margin-top: 0.25rem;
+            font-style: italic;
+        }
+
+        .error-message {
+            background: #2a0f0f;
+            border: 1px solid #8b2020;
+            border-radius: 6px;
+            padding: 0.75rem 1rem;
+            margin-bottom: 1.25rem;
+            font-size: 0.875rem;
+            color: #e07070;
+        }
+
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+
+        label {
+            display: block;
+            font-size: 0.85rem;
+            color: #a08878;
+            margin-bottom: 0.4rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            background: #0f0f0f;
+            border: 1px solid #3d2b1f;
+            border-radius: 6px;
+            color: #e8e0d4;
+            font-size: 1rem;
+            transition: border-color 0.2s;
+        }
+
+        input[type="email"]:focus,
+        input[type="password"]:focus {
+            outline: none;
+            border-color: #c8a882;
+        }
+
+        input::placeholder {
+            color: #4a3a30;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 0.85rem;
+            background: #2d6a4f;
+            border: none;
+            border-radius: 6px;
+            color: #e8e0d4;
+            font-size: 1rem;
+            font-family: 'Georgia', serif;
+            letter-spacing: 0.05em;
+            cursor: pointer;
+            margin-top: 0.5rem;
+            transition: background 0.2s;
+        }
+
+        .submit-btn:hover {
+            background: #3a8a65;
+        }
+
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 1.5rem;
+            font-size: 0.8rem;
+            color: #6b5a4e;
+            text-decoration: none;
+        }
+
+        .back-link:hover {
+            color: #c8a882;
+        }
+
+        @media (max-width: 480px) {
+            .login-card {
+                margin: 1rem;
+                padding: 2rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-card">
+        <div class="property-header">
+            <div class="lehua">🌺</div>
+            <h1>Hale ʻŌhiʻa Lehua</h1>
+            <p>Admin Portal</p>
+        </div>
+
+        <% if (error) { %>
+            <div class="error-message" role="alert">
+                <%= error %>
+            </div>
+            <% } %>
+
+                <form action="/admin/login" method="POST">
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="admin@haleohialehua.com" required
+                            autocomplete="email" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="••••••••" required
+                            autocomplete="current-password" />
+                    </div>
+
+                    <button type="submit" class="submit-btn">Sign In</button>
+                </form>
+
+                <a href="/" class="back-link">← Back to Hale ʻŌhiʻa Lehua</a>
+    </div>
+</body>
+
+</html>
