@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hale Ōhiʻa Lehua | Properties</title>
+</head>
+
+<body>
+    <h1>Hawaiʻi Island Properties</h1>
+
+    <% properties.forEach(function(prop) { %>
+        <div>
+            <h2>
+                <%= prop.name %>
+            </h2>
+            <p>Island: <%= prop.island %>
+            </p>
+            <p>Type: <%= prop.type %>
+            </p>
+            <p>
+                <%= prop.description %>
+            </p>
+            <p>Target Guest: <%= prop.targetSegment %>
+            </p>
+            <p>Reviews: <%= prop.reviews.length %>
+            </p>
+        </div>
+        <hr>
+        <% }); %>
+
+</body>
+
+</html>
