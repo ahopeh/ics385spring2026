@@ -77,7 +77,7 @@ This is the main page for ICS 385 Spring 2026, with coursework organized by week
     - [Readme](week13/hw13a-island-cards/README.md)
     -[Screenshot](week13/hw13a-island-cards/docs/Screenshot%202026-04-16%20at%208.48.32 PM.png)
 - 13b - PRD v2.0
-    - [PRD](week13/term-project/Week13PRDv2.pdf)
+    - [PRD](week13/term-project/Week13PRD.pdf)
 - 13c - Term Project 
     - [Readme](/week13/term-project/README.md)
     - [screenshots](/week13/term-project/docs/)
@@ -87,6 +87,7 @@ This is the main page for ICS 385 Spring 2026, with coursework organized by week
 - 14b - Passport.js authentication 
     - [Screenshots](week14/hw14b/deliverables/screenshots/)
     - [bcryptExplanation](week14/hw14b/deliverables/bcryptExplanation.md)
+- 14c - [PRD](week14/term-project/Week14PRD.pdf)
 - 14d - term-project
     - [Readme](week14/term-project/README.md)
     - [deliverables](week14/term-project/docs/week14/)
