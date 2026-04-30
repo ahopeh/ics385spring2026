@@ -91,3 +91,7 @@ This is the main page for ICS 385 Spring 2026, with coursework organized by week
 - 14d - term-project
     - [Readme](week14/term-project/README.md)
     - [deliverables](week14/term-project/docs/week14/)
+
+### Week15
+- 15a - Google Cloud and OAuth
+    - [Readme](/week15/hw15a/README.md)

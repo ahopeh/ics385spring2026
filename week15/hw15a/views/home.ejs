@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>HW15A — Google OAuth</title>
+</head>
+
+<body>
+    <h1>Welcome</h1>
+    <% if (user) { %>
+        <p>You are signed in as <%= user.displayName %>.</p>
+        <a href="/profile">Go to Profile</a>
+        <% } else { %>
+            <a href="/auth/google">Sign in with Google</a>
+            <% } %>
+</body>
+
+</html>

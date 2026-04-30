@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Profile</title>
+</head>
+
+<body>
+    <h1>Profile</h1>
+    <p><strong>Name:</strong>
+        <%= user.displayName %>
+    </p>
+    <p><strong>Email:</strong>
+        <%= user.email %>
+    </p>
+    <p><strong>Mongoose _id:</strong>
+        <%= user._id %>
+    </p>
+    <form action="/logout" method="POST">
+        <button type="submit">Log Out</button>
+    </form>
+</body>
+
+</html>
