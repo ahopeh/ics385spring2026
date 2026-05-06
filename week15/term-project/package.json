@@ -6,7 +6,9 @@
   "type": "commonjs",
   "scripts": {
     "start": "node server.js",
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "build": "cd client && npm install && npm run build",
+    "test": "jest"
   },
   "dependencies": {
     "bcrypt": "^5.1.1",

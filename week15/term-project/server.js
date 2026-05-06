@@ -47,6 +47,9 @@ initPassport(passport);
 app.use(passport.initialize());
 app.use(passport.session());
 
+// Serve React frontend
+app.use(express.static(path.join(__dirname, 'client/dist')));
+
 // Routes
 app.use('/properties', propertyRoutes);
 app.use('/api/origin', originRoutes);
@@ -55,6 +58,11 @@ app.use('/api/inquiries', require('./routes/inquiries'));
 app.use('/admin', authRoutes);
 app.use('/admin', adminRoutes);
 app.use('/auth', require('./routes/google-auth'));
+
+// Catch-all: serve React app for any non-API route
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'client/dist', 'index.html'));
+});
 
 // Export for Jest
 module.exports = app;
