@@ -1,0 +1,487 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #0f1412;
+  color: #e8e0d5;
+  font-family: 'Georgia', serif;
+}
+
+.app {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* ─── Site Header ─── */
+.site-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #2a3a2e;
+  padding-bottom: 1.5rem;
+}
+
+.site-header h1 {
+  font-size: 2rem;
+  color: #e8a245;
+  letter-spacing: 0.05em;
+}
+
+.subtitle {
+  color: #6a8a72;
+  margin-top: 0.4rem;
+  font-style: italic;
+}
+
+/* ─── Dashboard Link Button ─── */
+.dashboard-link {
+  background: transparent;
+  border: 2px solid #e8a245;
+  color: #e8a245;
+  padding: 0.75rem 2rem;
+  font-family: 'Georgia', serif;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.dashboard-link:hover {
+  background: #e8a245;
+  color: #0f1412;
+}
+
+/* ─── Dashboard Layout ─── */
+.dashboard {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.dashboard-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #2a3a2e;
+  padding-bottom: 1.5rem;
+}
+
+.dashboard-header h1 {
+  font-size: 2rem;
+  color: #e8a245;
+}
+
+.dashboard-tagline {
+  color: #6a8a72;
+  font-style: italic;
+  margin-top: 0.4rem;
+}
+
+.dashboard-section {
+  margin-bottom: 3rem;
+}
+
+.section-title {
+  color: #e8a245;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.charts-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* ─── Metric Cards ─── */
+.metric-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.metric-card {
+  background: #161e19;
+  border: 1px solid #2a3a2e;
+  border-top: 4px solid #e8a245;
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.metric-value {
+  font-size: 2.2rem;
+  color: #e8a245;
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+
+.metric-label {
+  color: #e8e0d5;
+  font-size: 0.95rem;
+  margin-bottom: 0.25rem;
+}
+
+.metric-unit {
+  color: #6a8a72;
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
+/* ─── Island Selector ─── */
+.island-selector {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  margin: 1.5rem 0;
+}
+
+.island-btn {
+  padding: 0.5rem 1.25rem;
+  border-radius: 20px;
+  border: 2px solid;
+  font-size: 0.9rem;
+  cursor: pointer;
+  font-family: 'Georgia', serif;
+  transition: all 0.2s ease;
+  background: transparent;
+}
+
+.island-btn:hover {
+  opacity: 0.85;
+  transform: translateY(-2px);
+}
+
+.island-btn.selected {
+  font-weight: bold;
+}
+
+/* ─── Section title centered ─── */
+.section-title-center {
+  color: #e8a245;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  text-align: center;
+}
+
+/* ─── Charts ─── */
+.chart-container {
+  background: #161e19;
+  border: 1px solid #2a3a2e;
+  border-radius: 8px;
+  padding: 1.5rem;
+  position: relative;
+}
+
+/* ─── Weather Widget ─── */
+.weather-widget {
+  margin-top: 2rem;
+ width: 100%;
+}
+
+.weather-title {
+  color: #e8a245;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #2a3a2e;
+  padding-bottom: 0.5rem;
+  text-align: center;
+}
+
+.weather-volcano {
+  display: grid;
+  grid-template-columns: 120px 1fr 120px;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.weather-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.weather-card {
+  background: #161e19;
+  border: 1px solid #2a3a2e;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.weather-card-wide {
+  background: #161e19;
+  border: 1px solid #2a3a2e;
+  border-radius: 8px;
+  padding: 1.25rem;
+  text-align: center;
+}
+
+.weather-label {
+  color: #e8a245;
+  font-size: 0.85rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.weather-temp {
+  font-size: 1.8rem;
+  color: #e8e0d5;
+  margin-bottom: 0.25rem;
+}
+
+.weather-desc {
+  color: #6a8a72;
+  font-style: italic;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  text-transform: capitalize;
+}
+
+.weather-details {
+  color: #a0b8a8;
+  font-size: 0.8rem;
+}
+
+.weather-error {
+  color: #6a8a72;
+  font-style: italic;
+}
+
+.usgs-badge {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  margin-top: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.usgs-NORMAL {
+  background: #2a5a2e;
+  color: #a8d8a8;
+}
+
+.usgs-ADVISORY {
+  background: #5a4a0a;
+  color: #e8d080;
+}
+
+.usgs-WATCH {
+  background: #5a2a0a;
+  color: #e8a060;
+}
+
+.usgs-WARNING {
+  background: #5a0a0a;
+  color: #e88080;
+}
+
+/* ─── Volcano Loader ─── */
+.volcano-loader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  gap: 1rem;
+}
+
+.volcano-svg {
+  width: 80px;
+  height: 64px;
+}
+
+.lava-stream {
+  stroke-dasharray: 40;
+  stroke-dashoffset: 40;
+  animation: flowDown 1.2s ease-in-out infinite;
+}
+
+.lava-1 {
+  animation-delay: 0s;
+}
+
+.lava-2 {
+  animation-delay: 0.3s;
+}
+
+.lava-3 {
+  animation-delay: 0.6s;
+}
+
+@keyframes flowDown {
+  0% {
+    stroke-dashoffset: 40;
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+    opacity: 0;
+  }
+}
+
+.spark {
+  animation: sparkFloat 1s ease-out infinite;
+  transform-origin: center;
+}
+
+.spark-1 {
+  animation-delay: 0s;
+}
+
+.spark-2 {
+  animation-delay: 0.2s;
+}
+
+.spark-3 {
+  animation-delay: 0.4s;
+}
+
+.spark-4 {
+  animation-delay: 0.6s;
+}
+
+@keyframes sparkFloat {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-15px) scale(0);
+    opacity: 0;
+  }
+}
+
+.loader-text {
+  color: #6a8a72;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+/* ─── Island Cards (HW13-A reference) ─── */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.island-card {
+  background: #161e19;
+  border: 1px solid #2a3a2e;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.island-card:hover {
+  transform: translateY(-3px);
+  border-color: #e8a245;
+}
+
+.island-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+}
+
+.card-body {
+  padding: 1rem;
+}
+
+.card-body h2 {
+  font-size: 1.2rem;
+  color: #e8a245;
+  margin-bottom: 0.25rem;
+}
+
+.nickname {
+  color: #6a8a72;
+  font-style: italic;
+  font-size: 0.9rem;
+  margin-bottom: 0.6rem;
+}
+
+.segment-badge {
+  display: inline-block;
+  background: #2a3a2e;
+  color: #e8e0d5;
+  font-size: 0.75rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  margin-bottom: 0.6rem;
+  letter-spacing: 0.03em;
+}
+
+.avg-stay {
+  font-size: 0.9rem;
+  color: #a0b8a8;
+}
+
+.avg-stay strong {
+  color: #e8e0d5;
+}
+
+/* ─── Summary Card ─── */
+.summary-card {
+  background: #161e19;
+  border: 1px solid #2a3a2e;
+  border-left: 4px solid #e8a245;
+  padding: 0.75rem 1.25rem;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+  display: flex;
+  gap: 2rem;
+  color: #a0b8a8;
+  font-size: 0.95rem;
+}
+
+.summary-card strong {
+  color: #e8a245;
+}
+
+/* ─── Controls ─── */
+.controls {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.controls label {
+  color: #a0b8a8;
+  font-size: 0.95rem;
+}
+
+.controls select {
+  background: #161e19;
+  color: #e8e0d5;
+  border: 1px solid #2a3a2e;
+  padding: 0.4rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.controls select:focus {
+  outline: 2px solid #e8a245;
+}

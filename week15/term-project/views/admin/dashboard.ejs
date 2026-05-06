@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard — Hale ʻŌhiʻa Lehua</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            background-color: #0f0f0f;
+            background-image: radial-gradient(ellipse at top, #1a0a00 0%, #0f0f0f 70%);
+            font-family: 'Georgia', serif;
+            color: #e8e0d4;
+        }
+
+        header {
+            background: #1a1a1a;
+            border-bottom: 1px solid #3d2b1f;
+            padding: 1rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .header-left a {
+            font-size: 1.2rem;
+            color: #c8a882;
+            letter-spacing: 0.05em;
+            text-decoration: none;
+        }
+
+        .header-left a:hover {
+            color: #e8e0d4;
+        }
+
+        .header-left p {
+            font-size: 0.8rem;
+            color: #6b5a4e;
+            font-style: italic;
+            margin-top: 0.2rem;
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .admin-email {
+            font-size: 0.85rem;
+            color: #a08878;
+        }
+
+        .logout-btn {
+            padding: 0.5rem 1rem;
+            background: transparent;
+            border: 1px solid #3d2b1f;
+            border-radius: 6px;
+            color: #a08878;
+            font-family: 'Georgia', serif;
+            font-size: 0.85rem;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .logout-btn:hover {
+            border-color: #c8a882;
+            color: #c8a882;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 2.5rem auto;
+            padding: 0 2rem;
+        }
+
+        .welcome {
+            margin-bottom: 2rem;
+        }
+
+        .welcome h2 {
+            font-size: 1.5rem;
+            color: #c8a882;
+        }
+
+        .welcome p {
+            color: #6b5a4e;
+            font-size: 0.9rem;
+            margin-top: 0.3rem;
+            font-style: italic;
+        }
+
+        /* Stats bar */
+        .stats-bar {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .stat-card {
+            background: #1a1a1a;
+            border: 1px solid #3d2b1f;
+            border-radius: 8px;
+            padding: 1rem 1.5rem;
+            text-align: center;
+        }
+
+        .stat-card .number {
+            font-size: 2rem;
+            color: #c8a882;
+        }
+
+        .stat-card .label {
+            font-size: 0.75rem;
+            color: #6b5a4e;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-top: 0.25rem;
+        }
+
+        .section-title {
+            font-size: 1rem;
+            color: #a08878;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #3d2b1f;
+        }
+
+        /* Two column layout */
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #1a1a1a;
+            border: 1px solid #3d2b1f;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        thead {
+            background: #2a1a10;
+        }
+
+        th {
+            padding: 0.85rem 1rem;
+            text-align: left;
+            font-size: 0.78rem;
+            color: #a08878;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-weight: normal;
+        }
+
+        td {
+            padding: 0.85rem 1rem;
+            font-size: 0.88rem;
+            border-top: 1px solid #2a1a10;
+            color: #e8e0d4;
+        }
+
+        tr:hover td {
+            background: #1f1f1f;
+        }
+
+        .island-badge {
+            display: inline-block;
+            padding: 0.2rem 0.6rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            background: #2d6a4f22;
+            border: 1px solid #2d6a4f;
+            color: #52b788;
+        }
+
+        .guest-badge {
+            display: inline-block;
+            padding: 0.2rem 0.6rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+        }
+
+        .guest-badge.leisure {
+            background: #1a3a5c22;
+            border: 1px solid #2a6a9c;
+            color: #6aabdc;
+        }
+
+        .guest-badge.research {
+            background: #3a1a5c22;
+            border: 1px solid #6a2a9c;
+            color: #ab6adc;
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 0.2rem 0.6rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+        }
+
+        .status-badge.new {
+            background: #2d6a4f22;
+            border: 1px solid #2d6a4f;
+            color: #52b788;
+        }
+
+        .status-badge.read {
+            background: #3d2b1f;
+            border: 1px solid #6b5a4e;
+            color: #a08878;
+        }
+
+        /* Sister property interest bars */
+        .interest-bars {
+            background: #1a1a1a;
+            border: 1px solid #3d2b1f;
+            border-radius: 8px;
+            padding: 1.25rem;
+        }
+
+        .interest-bar-item {
+            margin-bottom: 1rem;
+        }
+
+        .interest-bar-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .interest-bar-label {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.82rem;
+            color: #a08878;
+            margin-bottom: 0.35rem;
+        }
+
+        .interest-bar-track {
+            height: 8px;
+            background: #2a1a10;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .interest-bar-fill {
+            height: 100%;
+            background: #2d6a4f;
+            border-radius: 4px;
+            transition: width 0.3s;
+        }
+
+        .no-data {
+            color: #6b5a4e;
+            font-style: italic;
+            font-size: 0.85rem;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .full-width {
+            grid-column: 1 / -1;
+        }
+
+        .inquiry-email {
+            color: #c8a882;
+            font-size: 0.82rem;
+        }
+
+        .inquiry-date {
+            color: #6b5a4e;
+            font-size: 0.78rem;
+        }
+
+        @media (max-width: 768px) {
+            .stats-bar {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .dashboard-grid {
+                grid-template-columns: 1fr;
+            }
+
+            header {
+                flex-direction: column;
+                gap: 1rem;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header-left">
+            <a href="http://localhost:5173">🌺 Hale ʻŌhiʻa Lehua</a>
+            <p>Admin Dashboard</p>
+        </div>
+        <div class="header-right">
+            <span class="admin-email">
+                <%= user.email %>
+            </span>
+            <a href="/admin/logout" class="logout-btn">Sign Out</a>
+        </div>
+    </header>
+
+    <main>
+        <div class="welcome">
+            <h2>Welcome back, <%= user.email.split('@')[0] %>
+            </h2>
+            <p>Manage your Hale ʻŌhiʻa Lehua properties and guest inquiries below.</p>
+        </div>
+
+        <!-- Stats Bar -->
+        <div class="stats-bar">
+            <div class="stat-card">
+                <div class="number">
+                    <%= properties.length %>
+                </div>
+                <div class="label">Properties</div>
+            </div>
+            <div class="stat-card">
+                <div class="number">
+                    <%= totalInquiries %>
+                </div>
+                <div class="label">Total Inquiries</div>
+            </div>
+            <div class="stat-card">
+                <div class="number">
+                    <%= leisureCount %>
+                </div>
+                <div class="label">Leisure</div>
+            </div>
+            <div class="stat-card">
+                <div class="number">
+                    <%= researchCount %>
+                </div>
+                <div class="label">Research</div>
+            </div>
+            <div class="stat-card">
+                <div class="number">
+                    <%= properties.reduce((sum, p)=> sum + (p.reviews ? p.reviews.length : 0), 0) %>
+                </div>
+                <div class="label">Reviews</div>
+            </div>
+        </div>
+
+        <!-- Two column: Properties + Sister Property Interest -->
+        <div class="dashboard-grid">
+            <div>
+                <p class="section-title">Property Listings</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Property</th>
+                            <th>Island</th>
+                            <th>Reviews</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% properties.forEach(property=> { %>
+                            <tr>
+                                <td>
+                                    <%= property.name %>
+                                </td>
+                                <td><span class="island-badge">
+                                        <%= property.island || 'Hawaiʻi' %>
+                                    </span></td>
+                                <td>
+                                    <%= property.reviews ? property.reviews.length : 0 %>
+                                </td>
+                            </tr>
+                            <% }) %>
+                    </tbody>
+                </table>
+            </div>
+
+            <div>
+                <p class="section-title">Sister Property Interest</p>
+                <div class="interest-bars">
+                    <% if (sisterStats.length===0) { %>
+                        <p class="no-data">No sister property interest recorded yet.</p>
+                        <% } else { %>
+                            <% const maxCount=sisterStats[0].count %>
+                                <% sisterStats.forEach(stat=> { %>
+                                    <div class="interest-bar-item">
+                                        <div class="interest-bar-label">
+                                            <span>
+                                                <%= stat._id %>
+                                            </span>
+                                            <span>
+                                                <%= stat.count %>
+                                                    <%= stat.count===1 ? 'inquiry' : 'inquiries' %>
+                                            </span>
+                                        </div>
+                                        <div class="interest-bar-track">
+                                            <div class="interest-bar-fill"
+                                                style="width: <%- Math.round((stat.count / maxCount) * 100) %>%">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <% }) %>
+                                        <% } %>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recent Inquiries -->
+        <div class="full-width">
+            <p class="section-title">Recent Inquiries</p>
+            <% if (inquiries.length===0) { %>
+                <p class="no-data">No inquiries yet.</p>
+                <% } else { %>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Type</th>
+                                <th>Dates</th>
+                                <th>Status</th>
+                                <th>Received</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% inquiries.forEach(inquiry=> { %>
+                                <tr>
+                                    <td>
+                                        <%= inquiry.name %>
+                                    </td>
+                                    <td class="inquiry-email">
+                                        <%= inquiry.email %>
+                                    </td>
+                                    <td>
+                                        <span class="guest-badge <%= inquiry.guestType %>">
+                                            <%= inquiry.guestType %>
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <%= inquiry.preferredDates || '—' %>
+                                    </td>
+                                    <td>
+                                        <span class="status-badge <%= inquiry.status %>">
+                                            <%= inquiry.status %>
+                                        </span>
+                                    </td>
+                                    <td class="inquiry-date">
+                                        <%= new Date(inquiry.createdAt).toLocaleDateString('en-US', { month: 'short' , day: 'numeric' ,
+                                            year: 'numeric' }) %>
+                                    </td>
+                                </tr>
+                                <!-- Detail row -->
+                                <tr>
+                                    <td colspan="6" style="background: #111; padding: 0.75rem 1rem;">
+                                        <% if (inquiry.message) { %>
+                                            <p style="font-size:0.82rem; color:#a08878; margin-bottom:0.4rem;">
+                                                <strong>Notes:</strong>
+                                                <%= inquiry.message %>
+                                            </p>
+                                            <% } %>
+                                                <% if (inquiry.guestType==='research' ) { %>
+                                                    <% if (inquiry.affiliation) { %>
+                                                        <p style="font-size:0.82rem; color:#a08878; margin-bottom:0.4rem;">
+                                                            <strong>Affiliation:</strong>
+                                                            <%= inquiry.affiliation %>
+                                                        </p>
+                                                        <% } %>
+                                                            <% if (inquiry.researchFocus) { %>
+                                                                <p style="font-size:0.82rem; color:#a08878; margin-bottom:0.4rem;">
+                                                                    <strong>Research Focus:</strong>
+                                                                    <%= inquiry.researchFocus %>
+                                                                </p>
+                                                                <% } %>
+                                                                    <% if (inquiry.facilityInterest) { %>
+                                                                        <p style="font-size:0.82rem; color:#a08878;">
+                                                                            <strong>Facility Interest:</strong>
+                                                                            <% var facilities=[]; %>
+                                                                                <% if (inquiry.facilityInterest.labSpace) facilities.push('Lab Space'); %>
+                                                                                    <% if (inquiry.facilityInterest.quietStudyRooms) facilities.push('Quiet Study Rooms'); %>
+                                                                                        <% if (inquiry.facilityInterest.equipmentStorage) facilities.push('Equipment Storage'); %>
+                                                                                            <%= facilities.length> 0 ? facilities.join(', ') : 'None specified' %>
+                                                                        </p>
+                                                                        <% } %>
+                                                                            <% } %>
+                                                                                <% if (inquiry.guestType==='leisure' ) { %>
+                                                                                    <% if (inquiry.sisterPropertyInterest &&
+                                                                                        inquiry.sisterPropertyInterest.length> 0) { %>
+                                                                                        <p
+                                                                                            style="font-size:0.82rem; color:#a08878; margin-bottom:0.4rem;">
+                                                                                            <strong>Sister Property Interest:</strong>
+                                                                                            <%= inquiry.sisterPropertyInterest.join(', ') %>
+                                                                    </p>
+                                                                  <% } %>
+                                                                  <% if (inquiry.extendedStayInterest) { %>
+                                                                    <p style="font-size:0.82rem; color:#a08878;">
+                                                                      <strong>Extended Stay:</strong> Interested in extended stay pricing
+                                                                    </p>
+                                                                  <% } %>
+                                                                <% } %>
+                                                              </td>
+                                                            </tr>
+                                                            <% }) %>
+                        </tbody>
+                    </table>
+                    <% } %>
+        </div>
+    </main>
+</body>
+
+</html>
